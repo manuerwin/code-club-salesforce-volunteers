@@ -1,0 +1,29 @@
+# sensitive ant properties that should not be stored anywhere except locally
+build.properties
+
+# salesforce package definition
+package.xml
+
+# ant sample files
+sample*
+
+# OSX file system
+.DS_Store*
+Thumbs.db
+
+## IntelliJ / Illuminated Cloud
+*.iml
+
+# Images and general files
+ehthumbs.db
+Icon?
+*.sh
+*.xls*
+*.csv
+*.graffle
+*.pdf
+*.png
+*.gif
+*.ods
+build.*
+*.sdl
