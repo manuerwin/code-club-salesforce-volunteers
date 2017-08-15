@@ -1,0 +1,104 @@
+<aura:component controller="addChildController" 
+                implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <!-- init aura:handler action[doInit] auto call on component load -->  
+    <aura:attribute name="ContactTypevar" type="String" default="Student"/> 
+    <aura:attribute name="CopyCount" type="Integer" default="0" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+	<!-- Register the App Event used to let other components know that they need to refresh -->
+	<aura:registerEvent name="aeEvent" type="c:aeEvent"/>    
+    
+    <!-- On receiving an event run this function -->
+	<aura:handler event="c:aeEvent" action="{!c.doInit}"/>
+     
+    <!-- 1."ChildRecordList" attibute store the list of child record. --> 
+    <aura:attribute name="ChildRecordList" type="List" /> 
+    
+    <!--Maybe use a data table from the Lightning Design System:
+    https://www.lightningdesignsystem.com/components/data-tables/ -->
+    
+    <div class="slds-m-around--x-small">
+        
+               
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">    
+			<!--<div class="slds-grid slds-grid-\-align-left slds-text-title_caps"> Available attendees, select and use button to add</div> -->
+            <div class="slds-p-horizontal_small slds-size_1-of-1 slds-grid--align-left slds-text-title_caps"> Available attendees, select and use button to add</div> 
+                <div class="slds-p-horizontal_small slds-size_3-of-5">
+           			<div class="slds-m-around--large">
+                        <div class="slds-form-element">
+                            <label class="slds-checkbox_toggle">
+                                <span class="slds-form-element__label slds-m-bottom_none">Show Staff</span>
+                                <ui:inputCheckbox change="{!c.selectChangeStaff}"/>
+                                <span id="toggle-desc" class="slds-checkbox_faux_container" aria-live="assertive">
+                                    <span class="slds-checkbox_faux"></span>
+                                    <span class="slds-checkbox_on"></span>
+                                    <span class="slds-checkbox_off"></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+				</div>                                                                  
+
+
+            	<div class="slds-p-horizontal_small slds-size_2-of-5">
+                    <div class="slds-m-around--x-small">
+                        <button class="slds-button slds-button--brand" onclick="{!c.addSelected}">Add Records</button>
+                    </div>    
+                </div>
+
+        </div>
+        
+        <table class="slds-table slds-table--bordered slds-table--striped slds-table--cell-buffer slds-table--fixed-layout">
+            <thead>
+                <tr class="slds-text-heading--label">
+                    <th style="width:3.25rem;" class="slds-text-align--right">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <label class="slds-checkbox">
+                                    <!--header checkbox for select all-->
+                                    <ui:inputCheckbox aura:id="box3" change="{!c.selectAll}"/>
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label text"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </th>                    
+                    <th scope="col">
+                        <div class="slds-truncate" title="Name">Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Reg. Status">Status</div>
+                    </th>
+                </tr>
+            </thead>
+           
+            <tbody>
+                <!-- Iterate all child record list in table format -->  
+                 <aura:iteration items="{!v.ChildRecordList}" var="rec">
+                     <tr>
+                         <td scope="row" class="slds-text-align--right" style="width:3.25rem;">
+                             <div class="slds-form-element">
+                                 <div class="slds-form-element__control">
+                                     <label class="slds-checkbox">
+                                         <ui:inputCheckbox text="{!rec.Id}" aura:id="checkBox" value=""/>
+                                         <span class="slds-checkbox--faux"></span>
+                                         <span class="slds-form-element__label text"></span>
+                                     </label>
+                                 </div>
+                             </div>
+                         </td>
+                         <td>
+                             <div class="slds-truncate" title="{!rec.Full_Name__c}">{!rec.Full_Name__c}</div>
+                         </td>
+                         <td>
+                             <div class="slds-truncate" title="{!rec.Registration_Status__c}">{!rec.Registration_Status__c}</div>
+                         </td>
+                     </tr>
+                </aura:iteration>
+
+            </tbody>
+
+        </table>
+    </div>
+
+</aura:component>

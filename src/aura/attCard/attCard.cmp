@@ -1,0 +1,23 @@
+<aura:component >
+    <aura:attribute name="attendance" type="Attendance__c" />
+    
+    <lightning:card variant="Narrow" title="{!v.attendance.ID}" 
+                    iconName="standard:contact">
+        <aura:set attribute="actions">
+            <lightning:button name="details" label="Details" onclick="{!c.goToRecord}" />
+        </aura:set>    
+        <aura:set attribute="footer">
+            <lightning:badge label="{!v.attendance.ID}"/>
+        </aura:set>
+        <p class="slds-p-horizontal--small">
+            Name: {!v.attendance.Contact__r.Name}
+        </p>
+        <p class="slds-p-horizontal--small">
+            Role: {!v.attendance.Role__c}
+        </p>
+        <p class="slds-p-horizontal--small">
+            Status: {!v.attendance.Attendance_Status__c}
+        </p>
+    </lightning:card>
+    
+</aura:component>

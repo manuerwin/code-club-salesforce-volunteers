@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Template to provide details to the class leader of their upcoming class</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Code_Club</letterhead>
+    <name>Leader - upcoming class details</name>
+    <style>formalLetter</style>
+    <subject>Your upcoming Code Club Class: {!Class__c.Name}</subject>
+    <textOnly>Hi {!Class__c.Session_Leader_Name__c},
+
+You are scheduled to be the leader of the upcoming Code Club class:
+Date &amp; Time: {!Class__c.Class_Date__c}
+Location: Piha Meeting Room, L26, PwC Tower
+
+Registration numbers for this class are:
+Students: {!Class__c.Student_Count__c}
+Staff: {!Class__c.Staff_Count__c} including you
+
+For a full class list, click here:
+Classic: https://codeclub-nz.my.salesforce.com/00O7F000001hzoN?&amp;pv0={!Class__c.Id}
+Lightning: https://codeclub-nz.lightning.force.com/one/one.app#/sObject/00O7F000001hzoNUAQ/view?=undefined&amp;fv0={!Class__c.Id}
+
+(Just in case you can&apos;t remember your username in this org, it is {!Class__c.Session_Leader_SF_Username__c}).
+
+Please confirm with any other staff members listed on this linked report that they are ready to help you.
+
+The Topic for this class is {!Class__c.Project_Topic__c} and the content can be found here: {!Class__c.Content_URL__c}.
+
+Have fun and keep the students keen :-)
+
+On the completion of the class - please remember to update the attendance status of all the students by updating this Class record&apos;s related list
+https://codeclub-nz.my.salesforce.com/{!Class__c.Id},
+
+...and update the roster for next week&apos;s class
+
+There&apos;s a video here that shows you how to do these things:
+https://codeclub-nz.lightning.force.com/one/one.app#/sObject/ContentDocument/0697F000000cPdPQAU
+
+...and don&apos;t forget to log your time in the Salesforce.org system.  Here&apos;s a direct link to the activity record where you can log your time once you have signed in via Aloha
+https://foundation.my.salesforce.com/apex/Volunteerforce1?sfdc.tabName=01r80000000Gzb4#/log-hours?log-step=3.
+
+If you haven&apos;t already got a Scratch account, then sign up here: https://scratch.mit.edu/ . It&apos;s a bit like Trailhead - you need to log into your scratch account before you can save any work you do
+
+Best wishes,
+Code Club Aotearoa</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

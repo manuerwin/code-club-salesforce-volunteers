@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<img src="https://codeclub-nz--c.ap5.content.force.com/servlet/servlet.ImageServer?id=0157F000000HY75&amp;oid=00D7F000000ypub" alt="" border="0" align="left">]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[Hi {!Contact.FirstName}<br><br>This is to remind you that you are registered for Code Club at Salesforce.<br><br>Date/Time: {!Class__c.Class_Date__c}<br>Location: <b>Salesforce, L26 PwC Tower, 188 Quay Street, Auckland</b><br><br>When you arrive at the Servcorp front desk, please ask for the Session Leader, <b>{!Class__c.Session_Leader_Name__c}</b> by name.&nbsp; <br><br>If for any reason, you can't make the session, can you please let the leader know in advance?&nbsp; The leader's contact details are:<br><ul><li>email: {!Class__c.Session_Leader_Email__c}</li><li>phone: {!Class__c.Session_Leader_Phone__c}</li></ul>Please remember to bring your computer with you if you have one, but if you haven't, we should be able to allow you to borrow or share one.<br><br>If you are being brought by a parent, then they can join the session or sit in our reception and read the paper or look at the view.&nbsp; There is also a kitchen with tea and coffee available <br><br>Looking forward to seeing you soon.<br><br>Regards,<br><br>Code Club Aotearoa and Salesforce New Zealand<br>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[<font color="#FFFFFF">ref: {!Contact.Id}</font><br>]]></td>
+</tr>
+</table>

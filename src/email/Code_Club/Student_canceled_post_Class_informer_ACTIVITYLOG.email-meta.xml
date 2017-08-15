@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send the attendees details of what they missed and invite them to try the project at home ACTIVITY LOG</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Code_Club</letterhead>
+    <name>Student (canceled) - post class let them have details of the work ACTIVITY LOG</name>
+    <style>formalLetter</style>
+    <subject>Sorry we missed you at Code Club - ACTIVITY LOG</subject>
+    <textOnly>Hi {!Contact.FirstName}
+
+We are sorry you couldn&apos;t make it to Code Club at Salesforce
+
+The project you missed was: {!Class__c.Project_Topic__c}
+Direct link: {!Class__c.Content_URL__c}
+
+If you get the chance, and to keep up with the rest of the class, it would great if you could try to complete the project before the next class.
+
+Remember that in order to save work you do on the project, you need to sign up for a Scratch account at https://scratch.mit.edu/ (if you haven&apos;t already done so)
+
+We hope to see you at the next class and you&apos;ll get a reminder from us a couple of days beforehand
+
+Best wishes,
+
+Code Club Aotearoa
+ref: {!Contact.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
