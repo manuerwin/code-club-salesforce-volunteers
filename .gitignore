@@ -27,3 +27,6 @@ Icon?
 *.ods
 build.*
 *.sdl
+
+# SFDX scratch definition
+project-scratch-def.json
