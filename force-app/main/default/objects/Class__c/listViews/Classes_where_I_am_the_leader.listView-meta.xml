@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Classes_where_I_am_the_leader</fullName>
+    <columns>NAME</columns>
+    <columns>Class_Date__c</columns>
+    <columns>Leader__c</columns>
+    <columns>Project_Topic__c</columns>
+    <columns>Student_Count__c</columns>
+    <columns>Staff_Count__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>I_am_the_leader__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Class_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Future classes where I am the leader</label>
+</ListView>

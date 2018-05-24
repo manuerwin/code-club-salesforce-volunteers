@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Session_Leader_Email__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Automatically populated once a Session Leader is assigned via the Attendances Related List</inlineHelpText>
+    <label>Session Leader Email</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

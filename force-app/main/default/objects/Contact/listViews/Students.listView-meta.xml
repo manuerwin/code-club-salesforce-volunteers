@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Students</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Registration_Status__c</columns>
+    <columns>CONTACT.PHONE3</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Gender__c</columns>
+    <columns>CONTACT.BIRTHDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Contact_Type__c</field>
+        <operation>equals</operation>
+        <value>Student</value>
+    </filters>
+    <filters>
+        <field>Registration_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Inactive,Staff,Withdrawn</value>
+    </filters>
+    <label>Students</label>
+</ListView>

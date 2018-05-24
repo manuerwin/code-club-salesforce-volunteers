@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dont_Exceed_the_Maximum_Class_Size</fullName>
+    <active>true</active>
+    <description>Don't allow Student Count to exceed Custom Setting Value Maximum_Class_Size__c.Max_Student_Count__c</description>
+    <errorConditionFormula>Student_Count__c  >
+$Setup.Maximum_Class_Size__c.Max_Student_Count__c</errorConditionFormula>
+    <errorMessage>You are trying to Enrol more Students on this class than there is capacity for</errorMessage>
+</ValidationRule>

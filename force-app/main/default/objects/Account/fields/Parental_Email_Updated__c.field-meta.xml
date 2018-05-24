@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parental_Email_Updated__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Set to TRUE if the email address for the account's parental contact is updated
+If the checkbox gets set to true, a BP "Propagate Changed Parental Email checkbox to related contacts" is fired which updates the Parental_Email_Updated__c field on related contact records</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Set TRUE if the email address for the account's parental contact updated
+which fires, a BP "Propagate Changed Parental Email checkbox to related contacts" is fired which updates the Parental_Email_Updated__c field on related contact records</inlineHelpText>
+    <label>Parental Email Updated</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

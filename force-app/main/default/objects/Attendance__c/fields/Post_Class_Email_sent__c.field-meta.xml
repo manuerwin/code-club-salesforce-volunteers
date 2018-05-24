@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Class_Email_sent__c</fullName>
+    <externalId>false</externalId>
+    <formula>NOT isblank( Post_Class_Summary_sent__c )</formula>
+    <inlineHelpText>True if the post-class summary email has been sent.  Used to control if the "attended" and "did not attend" buttons are enabled on he Class attendance component</inlineHelpText>
+    <label>Post Class Email sent</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

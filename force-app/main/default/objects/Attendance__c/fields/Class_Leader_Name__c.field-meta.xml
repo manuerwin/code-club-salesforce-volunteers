@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Class_Leader_Name__c</fullName>
+    <description>Name of the parent class leader</description>
+    <externalId>false</externalId>
+    <formula>Class__r.Session_Leader_Name__c</formula>
+    <inlineHelpText>Name of the class leader</inlineHelpText>
+    <label>Class Leader Name</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

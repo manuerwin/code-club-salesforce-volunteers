@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Staff_Count__c</fullName>
+    <externalId>false</externalId>
+    <label>Assistant Count</label>
+    <summaryFilterItems>
+        <field>Attendance__c.Role__c</field>
+        <operation>equals</operation>
+        <value>Assistant</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Attendance__c.Attendance_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Attendance__c.Class__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

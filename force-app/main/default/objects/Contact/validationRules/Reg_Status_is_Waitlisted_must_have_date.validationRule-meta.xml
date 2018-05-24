@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reg_Status_is_Waitlisted_must_have_date</fullName>
+    <active>true</active>
+    <description>If the Registration Status = Waitlisted, then the Date Waitlisted field must not be null</description>
+    <errorConditionFormula>ISPICKVAL(Registration_Status__c, "Waitlisted") &amp;&amp;  ISBLANK( Date_Waitlisted__c )</errorConditionFormula>
+    <errorDisplayField>Date_Waitlisted__c</errorDisplayField>
+    <errorMessage>If the Registration Status = Waitlisted, then the Date Waitlisted field must not be null</errorMessage>
+</ValidationRule>

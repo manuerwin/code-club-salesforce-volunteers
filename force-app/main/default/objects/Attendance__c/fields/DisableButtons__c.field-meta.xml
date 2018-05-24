@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DisableButtons__c</fullName>
+    <externalId>false</externalId>
+    <formula>ISPICKVAL(Attendance_Status__c, "Attended") || ISPICKVAL( Attendance_Status__c, "Cancelled")</formula>
+    <inlineHelpText>If true, then the attendance buttons on the Lightning page for Class Attendance management get diabled</inlineHelpText>
+    <label>DisableButtons</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,52 @@
+<aura:component >
+    <aura:attribute name="attendance" type="Attendance__c" />
+    
+    <tr>
+        <td>
+            <div class="slds-truncate" title="{!Attendance__c.Name}">{!Attendance__c.Name}</div>
+        </td>
+        <td>
+            <div class="slds-truncate" title="{!Attendance__c.Contact__r.Name}">{!Attendance__c.Contact__r.Name}</div>
+        </td>   
+        <td>
+            <div class="slds-truncate" title="{!Attendance__c.Role__c}">{!Attendance__c.Role__c}</div>
+        </td>
+        <td>
+            <div id="attStatus" class="slds-truncate" title="{!Attendance__c.Attendance_Status__c}">{!Attendance__c.Attendance_Status__c}</div>
+        </td>
+        <td>
+            <lightning:button label="Yes"
+                              iconName="action:approval"
+                              iconPosition="left"
+                              variant="brand"
+                              name="YesButton"
+                              value="{!Attendance__c.Name}"                                              
+                              onclick="{!c.AttendYes}"
+                              disabled="{Attendance__c.Post_Class_Email_sent__c}"
+                              />
+        </td>          
+        <td>
+            <lightning:button label="No"
+                              iconName="action:close"
+                              iconPosition="left"
+                              variant="brand"
+                              name="NoButton"
+                              value="{!Attendance__c.Name}"                                              
+                              onclick="{!c.AttendNo}"
+                              disabled="{Attendance__c.Post_Class_Email_sent__c}"
+                              />
+        </td>          
+        <td>
+            <lightning:button type="submit"
+                              iconName="utility:delete"
+                              iconPosition="left"
+                              variant="destructive"
+                              name="delButton"
+                              value="{!Attendance__c.Name}"
+                              onclick="{!c.delAttendee}"
+                              disabled="false"
+                              />
+        </td>                    
+    </tr>
+    
+</aura:component>

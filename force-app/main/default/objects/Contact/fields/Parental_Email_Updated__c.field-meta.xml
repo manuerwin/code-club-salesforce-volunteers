@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parental_Email_Updated__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Set to TRUE if Parental_Email_Updated__c on the parent account is set to TRUE
+When TRUE, fires a BP "Propagate changed parental email to attendance records" for related contacts which copies the parental email address from the account to every future attendance record</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Set TRUE if Parental_Email_Updated__c on parent account is set to TRUE
+If TRUE, fires a BP "Copy changed parental email to attendance records" for related contacts which copies parental email address from the account to every future attendance record</inlineHelpText>
+    <label>Parental Email Updated</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

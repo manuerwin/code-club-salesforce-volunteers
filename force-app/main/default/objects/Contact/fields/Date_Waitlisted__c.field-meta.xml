@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Waitlisted__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Required if Registration Status = Waitlisted
+Used to prioritise the order in which waitlisted students are contacted if a place becomes available</inlineHelpText>
+    <label>Date Waitlisted</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

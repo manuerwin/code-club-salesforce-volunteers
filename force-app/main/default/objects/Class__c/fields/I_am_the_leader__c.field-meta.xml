@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>I_am_the_leader__c</fullName>
+    <externalId>false</externalId>
+    <formula>Leader__r.Email    =  $User.Email</formula>
+    <inlineHelpText>True if the running user is also the Class Leader</inlineHelpText>
+    <label>I am the leader</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

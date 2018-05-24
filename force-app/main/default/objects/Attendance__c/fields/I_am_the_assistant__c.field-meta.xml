@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>I_am_the_assistant__c</fullName>
+    <externalId>false</externalId>
+    <formula>$User.FirstName =  Contact__r.FirstName  &amp;&amp; 
+ $User.LastName =  Contact__r.LastName &amp;&amp;
+  NOT ISPICKVAL( Attendance_Status__c, "Cancelled" ) &amp;&amp;
+  ISPICKVAL( Role__c , "Assistant" )</formula>
+    <label>I am the assistant</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

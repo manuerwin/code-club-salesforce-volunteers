@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reminder to send to student in advance of the class</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Code_Club</letterhead>
+    <name>Student - class reminder</name>
+    <style>formalLetter</style>
+    <subject>Reminder for your upcoming Code Club session</subject>
+    <textOnly>Hi {!Contact.FirstName}
+
+This is to remind you that you are registered for Code Club at Salesforce.
+
+Date/Time: {!Class__c.Class_Date__c}
+Location: Generator Board Room, The Generator, 12 Madden St Auckland
+
+When you arrive at the Servcorp front desk, please ask for the Session Leader, {!Class__c.Session_Leader_Name__c} by name and tell the receptionist that you are here for Code Club in the Generator Board Room
+
+If for any reason, you can't make the session, can you please let the leader know in advance?  The leader's contact details are:
+
+email: {!Class__c.Session_Leader_Email__c}
+phone: {!Class__c.Session_Leader_Phone__c}
+
+Please remember to bring your computer with you if you have one, but if you haven't, we should be able to allow you to borrow or share one.
+
+If you are being brought by a parent, then they can join the session or sit in our cafe, alternatively Wynyard Quarter is just a minute away.
+
+Looking forward to seeing you soon.
+
+Regards,
+
+Code Club Aotearoa and Salesforce New Zealand
+ref: {!Contact.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

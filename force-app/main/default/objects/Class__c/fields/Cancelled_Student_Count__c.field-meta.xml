@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled_Student_Count__c</fullName>
+    <description>Count of students on this class where Status is "Cancelled"</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Count of students on this class where Status is "Cancelled"</inlineHelpText>
+    <label>Cancelled Student Count</label>
+    <summaryFilterItems>
+        <field>Attendance__c.Attendance_Status__c</field>
+        <operation>equals</operation>
+        <value>Cancelled</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Attendance__c.Class__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

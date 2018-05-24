@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_Staff_should_be_linked_to_Users</fullName>
+    <active>true</active>
+    <description>Staff are sent emails in advance od classes that they are assigned to, but they might not remember their credentials.  This validation rule ensures that only Staff contacts are mapped to user accounts</description>
+    <errorConditionFormula>NOT(ISPICKVAL( Registration_Status__c, "Staff")) &amp;&amp;
+  NOT(ISBLANK( Salesforce_User_Account__c ))</errorConditionFormula>
+    <errorDisplayField>Salesforce_User_Account__c</errorDisplayField>
+    <errorMessage>Only Contacts with a registration status of "Staff" may be associated with a Salesforce User Account</errorMessage>
+</ValidationRule>

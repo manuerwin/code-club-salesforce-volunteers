@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Class_Summary_sent__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The date on which the "Sorry you couldn't make it" or the "Thanks for attending email was sent
+The email is triggered by the Attendance Record status being updated to "Attended" or "Canceled"</inlineHelpText>
+    <label>Post Class Summary sent date/time</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

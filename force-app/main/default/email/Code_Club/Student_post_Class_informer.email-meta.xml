@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send the attendees details of what they did and invite them to extend the project</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Code_Club</letterhead>
+    <name>Student (attended) - post class let them have details of the work that they did</name>
+    <style>formalLetter</style>
+    <subject>Thanks for attending Code Club</subject>
+    <textOnly>Hi {!Contact.FirstName}
+
+Thanks for coming to Code Club at Salesforce
+
+We though we'd send you details of what we covered on the class on : {!Class__c.Class_Date__c}
+
+If you want to try the project for yourself or try extending it further:
+The project was: {!Class__c.Project_Topic__c}
+Direct link: {!Class__c.Content_URL__c}
+
+Remember that in order to save your work, you need to sign up for a Trinket account at https://trinket.io/ (if you haven't already done so).  Note that students aged under 13 need parental permission and we'd recommend a parent helps create the account so that the username and password aren't mislaid
+
+We hope you enjoyed the class and we look forward to seeing you again
+
+You'll get a reminder from us a couple of days before the next class
+
+Best wishes,
+
+Code Club Aotearoa</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
