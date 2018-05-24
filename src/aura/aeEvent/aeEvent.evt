@@ -1,4 +1,0 @@
-<!--c:aeEvent-->
-<aura:event type="APPLICATION">
-    <aura:attribute name="SourceComponent" type="String"/> 
-</aura:event>
